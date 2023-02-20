@@ -1,0 +1,12 @@
+C:\Users\kaicen\OneDrive\C#\Feb2023\HumanResourceManagement\HRM.ApplicationCore\bin\Debug\net6.0\HRM.ApplicationCore.deps.json
+C:\Users\kaicen\OneDrive\C#\Feb2023\HumanResourceManagement\HRM.ApplicationCore\bin\Debug\net6.0\HRM.ApplicationCore.dll
+C:\Users\kaicen\OneDrive\C#\Feb2023\HumanResourceManagement\HRM.ApplicationCore\bin\Debug\net6.0\HRM.ApplicationCore.pdb
+C:\Users\kaicen\OneDrive\C#\Feb2023\HumanResourceManagement\HRM.ApplicationCore\obj\Debug\net6.0\HRM.ApplicationCore.csproj.AssemblyReference.cache
+C:\Users\kaicen\OneDrive\C#\Feb2023\HumanResourceManagement\HRM.ApplicationCore\obj\Debug\net6.0\HRM.ApplicationCore.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kaicen\OneDrive\C#\Feb2023\HumanResourceManagement\HRM.ApplicationCore\obj\Debug\net6.0\HRM.ApplicationCore.AssemblyInfoInputs.cache
+C:\Users\kaicen\OneDrive\C#\Feb2023\HumanResourceManagement\HRM.ApplicationCore\obj\Debug\net6.0\HRM.ApplicationCore.AssemblyInfo.cs
+C:\Users\kaicen\OneDrive\C#\Feb2023\HumanResourceManagement\HRM.ApplicationCore\obj\Debug\net6.0\HRM.ApplicationCore.csproj.CoreCompileInputs.cache
+C:\Users\kaicen\OneDrive\C#\Feb2023\HumanResourceManagement\HRM.ApplicationCore\obj\Debug\net6.0\HRM.ApplicationCore.dll
+C:\Users\kaicen\OneDrive\C#\Feb2023\HumanResourceManagement\HRM.ApplicationCore\obj\Debug\net6.0\refint\HRM.ApplicationCore.dll
+C:\Users\kaicen\OneDrive\C#\Feb2023\HumanResourceManagement\HRM.ApplicationCore\obj\Debug\net6.0\HRM.ApplicationCore.pdb
+C:\Users\kaicen\OneDrive\C#\Feb2023\HumanResourceManagement\HRM.ApplicationCore\obj\Debug\net6.0\ref\HRM.ApplicationCore.dll

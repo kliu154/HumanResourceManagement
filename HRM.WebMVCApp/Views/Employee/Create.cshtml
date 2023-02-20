@@ -1,0 +1,48 @@
+﻿@model EmployeeRequestModel;
+
+<div class="container">
+    <form asp-controller="Employee" asp-action="Create" method="post">
+        <div class="my-5 row col-12">
+            <label for="firstName">First Name</label>
+            <input asp-for="FirstName" class="form-control" />
+            <span asp-validation-for="FirstName"></span>
+        </div>
+        <div class="my-5 row col-12">
+            <label for="lastName">Last Name</label>
+            <input asp-for="LastName" class="form-control" />
+            <span asp-validation-for="LastName"></span>
+        </div>
+        <div class="my-5 row col-12">
+            <label for="phone">Phone</label>
+            <input asp-for="Phone" class="form-control" />
+            <span asp-validation-for="Phone"></span>
+        </div>
+        <div class="my-5 row col-12">
+            <label for="emailId">Email Id</label>
+            <input asp-for="EmailId" class="form-control" />
+            <span asp-validation-for="EmailId"></span>
+        </div>
+        <div class="my-5 row col-12">
+            <label for="ssn">SSN</label>
+            <input asp-for="SSN" class="form-control" />
+            <span asp-validation-for="SSN"></span>
+        </div>
+        <div class="my-5 row col-12">
+            <label for="ssn">Employee Role Id</label>
+            <input asp-for="EmployeeRoleId" class="form-control" />
+            <span asp-validation-for="EmployeeRoleId"></span>
+        </div>
+        <div class="my-5 row col-12">
+            <label for="ssn">Employee Type Id</label>
+            <input asp-for="EmployeeTypeId" class="form-control" />
+            <span asp-validation-for="EmployeeTypeId"></span>
+        </div>
+        <div class="my-5 row col-12">
+            <label for="ssn">Employee Status Id</label>
+            <input asp-for="EmployeeStatusId" class="form-control" />
+            <span asp-validation-for="EmployeeStatusId"></span>
+        </div>
+        <input type="submit" value="Add Employee" class="btn btn-primary" />
+    </form>
+
+</div>

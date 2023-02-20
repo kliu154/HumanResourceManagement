@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "HRM.WebMVCApp/1.0.0": {
+        "runtime": {
+          "HRM.WebMVCApp.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "HRM.WebMVCApp/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
