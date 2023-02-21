@@ -5,11 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - HRM.WebMVCApp</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/bootstrap.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/HRM.WebMVCApp.styles.css" asp-append-version="true" />
 </head>
 <body>
     <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarColor01">
+              <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                      <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Features</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Pricing</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Candidate</a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" asp-area="" asp-controller="Candidate" asp-action="Index">List of Candidates</a>
+                    <a class="dropdown-item" asp-area="" asp-controller="JobCategory" asp-action="Index">Job Categories</a>
+                    <a class="dropdown-item" asp-area="" asp-controller="JobRequirement" asp-action="Index">Job Requirements</a>
+                    <a class="dropdown-item" asp-area="" asp-controller="Submission" asp-action="Index">Submissions</a>
+                  </div>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Employee</a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" asp-area="" asp-controller="Employee" asp-action="Index">List of Employees</a>
+                    <a class="dropdown-item" asp-area="" asp-controller="EmployeeRole" asp-action="Index">Employee Roles</a>
+                    <a class="dropdown-item" asp-area="" asp-controller="EmployeeStatus" asp-action="Index">Employee Status</a>
+                    <a class="dropdown-item" asp-area="" asp-controller="EmployeeType" asp-action="Index">Employee Types</a>
+                  </div>
+                </li>
+              </ul>
+              <form class="d-flex">
+                <input class="form-control me-sm-2" type="search" placeholder="Search">
+                <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+              </form>
+            </div>
+          </div>
+        </nav>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">HRM.WebMVCApp</a>
@@ -28,6 +74,9 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Employee" asp-action="Index">Employees</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="JobCategory" asp-action="Index">Job Categories</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -45,7 +94,7 @@
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>

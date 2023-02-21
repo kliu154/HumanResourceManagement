@@ -1,6 +1,7 @@
 ﻿using HRM.ApplicationCore.Contract.Service;
 using HRM.ApplicationCore.Model.Request;
 using HRM.ApplicationCore.Model.Response;
+using HRM.Infrastructure.Service;
 using Microsoft.AspNetCore.Mvc;
 
 namespace HRM.WebMVCApp.Controllers

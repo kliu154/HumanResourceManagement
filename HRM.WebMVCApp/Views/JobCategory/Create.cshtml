@@ -1,0 +1,24 @@
+﻿@model JobCategoryRequestModel;
+
+<div class="container">
+    <form asp-controller="JobCategory" asp-action="Create" method="post">
+        <div class="my-5 row col-12">
+            <label for="name">Name</label>
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name"></span>
+        </div>
+        <div class="my-5">
+            <label for="isActive">Is Active</label>
+            <p>
+                <input type="radio" id="true" value="True" asp-for="IsActive" />
+                <label for="true">True</label>
+            </p>
+            <p>
+                <input type="radio" id="false" value="False" asp-for="IsActive" />
+                <label for="true">False</label>
+            </p>
+            <span asp-validation-for="IsActive"></span>
+        </div>
+        <input type="submit" value="Add Job Category" class="btn btn-primary" />
+    </form>
+</div>

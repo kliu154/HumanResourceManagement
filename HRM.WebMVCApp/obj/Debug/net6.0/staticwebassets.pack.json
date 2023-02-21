@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\HRM.WebMVCApp.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\kaicen\\OneDrive\\C#\\Feb2023\\HumanResourceManagement\\HRM.WebMVCApp\\wwwroot\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap.css"
+    },
+    {
       "Id": "C:\\Users\\kaicen\\OneDrive\\C#\\Feb2023\\HumanResourceManagement\\HRM.WebMVCApp\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

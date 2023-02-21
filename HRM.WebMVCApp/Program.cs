@@ -17,11 +17,23 @@ builder.Services.AddDbContext<HRMDbContext>(option =>
 
 // dependency injection for repositories
 builder.Services.AddScoped<ICandidateRepositoryAsync, CandidateRepositoryAsync>();
+builder.Services.AddScoped<IJobCategoryRepositoryAsync, JobCategoryRepositoryAsync>();
+builder.Services.AddScoped<IJobRequirementRepositoryAsync, JobRequirementRepositoryAsync>();
+builder.Services.AddScoped<ISubmissionRepositoryAsync, SubmissionRepositoryAsync>();
 builder.Services.AddScoped<IEmployeeRepositoryAsync, EmployeeRepositoryAsync>();
+builder.Services.AddScoped<IEmployeeRoleRepositoryAsync, EmployeeRoleRepositoryAsync>();
+builder.Services.AddScoped<IEmployeeStatusRepositoryAsync, EmployeeStatusRepositoryAsync>();
+builder.Services.AddScoped<IEmployeeTypeRepositoryAsync, EmployeeTypeRepositoryAsync>();
 
 // dependency injection for services
 builder.Services.AddScoped<ICandidateServiceAsync, CandidateServiceAsync>();
+builder.Services.AddScoped<IJobCategoryServiceAsync, JobCategoryServiceAsync>();
+builder.Services.AddScoped<IJobRequirementServiceAsync, JobRequirementServiceAsync>();
 builder.Services.AddScoped<IEmployeeServiceAsync, EmployeeServiceAsync>();
+builder.Services.AddScoped<ISubmissionServiceAsync, SubmissionServiceAsync>();
+builder.Services.AddScoped<IEmployeeRoleServiceAsync, EmployeeRoleServiceAsync>();
+builder.Services.AddScoped<IEmployeeStatusServiceAsync, EmployeeStatusServiceAsync>();
+builder.Services.AddScoped<IEmployeeTypeServiceAsync, EmployeeTypeServiceAsync>();
 
 
 var app = builder.Build();

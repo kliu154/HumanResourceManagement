@@ -1,0 +1,17 @@
+﻿@model SubmissionRequestModel;
+
+<div class="container">
+    <form asp-controller="Submission" asp-action="Create" method="post">
+        <div class="my-5 row col-12">
+            <label for="candidateId">Candidate Id</label>
+            <input asp-for="CandidateId" class="form-control" />
+            <span asp-validation-for="CandidateId"></span>
+        </div>
+        <div class="my-5 row col-12">
+            <label for="jobRequirementId">Job Requirement Id</label>
+            <input asp-for="JobRequirementId" class="form-control" />
+            <span asp-validation-for="JobRequirementId"></span>
+        </div>
+        <input type="submit" value="Add Submission" class="btn btn-primary" />
+    </form>
+</div>

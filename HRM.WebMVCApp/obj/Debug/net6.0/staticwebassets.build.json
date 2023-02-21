@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "80GMZxWrpMdSKh87i5O1ip80i+74wXdreUSoZQYiU+I=",
+  "Hash": "NyA9xaUJPhyuptsTgJ35VA76iOSxy0jVL58W/Kk0sxE=",
   "Source": "HRM.WebMVCApp",
   "BasePath": "_content/HRM.WebMVCApp",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\kaicen\\OneDrive\\C#\\Feb2023\\HumanResourceManagement\\HRM.WebMVCApp\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\HRM.WebMVCApp.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\kaicen\\OneDrive\\C#\\Feb2023\\HumanResourceManagement\\HRM.WebMVCApp\\wwwroot\\css\\bootstrap.css",
+      "SourceId": "HRM.WebMVCApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\kaicen\\OneDrive\\C#\\Feb2023\\HumanResourceManagement\\HRM.WebMVCApp\\wwwroot\\",
+      "BasePath": "_content/HRM.WebMVCApp",
+      "RelativePath": "css/bootstrap.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\bootstrap.css"
     },
     {
       "Identity": "C:\\Users\\kaicen\\OneDrive\\C#\\Feb2023\\HumanResourceManagement\\HRM.WebMVCApp\\wwwroot\\css\\site.css",
