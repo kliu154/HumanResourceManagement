@@ -27,6 +27,7 @@ builder.Services.AddScoped<IEmployeeTypeRepositoryAsync, EmployeeTypeRepositoryA
 builder.Services.AddScoped<IInterviewRepositoryAsync, InterviewRepositoryAsync>();
 builder.Services.AddScoped<IInterviewTypeRepositoryAsync, InterviewTypeRepositoryAsync>();
 builder.Services.AddScoped<IInterviewStatusRepositoryAsync, InterviewStatusRepositoryAsync>();
+builder.Services.AddScoped<IFeedbackRepositoryAsync, FeedbackRepositoryAsync>();
 
 // dependency injection for services
 builder.Services.AddScoped<ICandidateServiceAsync, CandidateServiceAsync>();
@@ -40,6 +41,7 @@ builder.Services.AddScoped<IEmployeeTypeServiceAsync, EmployeeTypeServiceAsync>(
 builder.Services.AddScoped<IInterviewServiceAsync, InterviewServiceAsync>();
 builder.Services.AddScoped<IInterviewTypeServiceAsync, InterviewTypeServiceAsync>();
 builder.Services.AddScoped<IInterviewStatusServiceAsync, InterviewStatusServiceAsync>();
+builder.Services.AddScoped<IFeedbackServiceAsync, FeedbackServiceAsync>();
 
 
 var app = builder.Build();
