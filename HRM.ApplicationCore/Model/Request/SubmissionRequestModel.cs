@@ -14,5 +14,6 @@ namespace HRM.ApplicationCore.Model.Request
         public int Id { get; set; }
         public int CandidateId { get; set; }
         public int JobRequirementId { get; set; }
+        public DateTime AppliedOn { get; set; }
     }
 }

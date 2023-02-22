@@ -26,11 +26,16 @@ namespace HRM.Infrastructure.Service
                 FirstName = model.FirstName,
                 LastName = model.LastName,
                 EmailId = model.EmailId,
+                DOB = model.DOB,
                 SSN = model.SSN,
+                CurrentAddress = model.CurrentAddress,
                 Phone = model.Phone,
+                HireDate = model.HireDate,
+                EndTime = model.EndTime,
                 EmployeeRoleId = model.EmployeeRoleId,
                 EmployeeTypeId = model.EmployeeTypeId,
-                EmployeeStatusId = model.EmployeeStatusId
+                EmployeeStatusId = model.EmployeeStatusId,
+                ManagerId = model.ManagerId
             };
             return employeeRepositoryAsync.InsertAsync(employee);
         }
@@ -51,11 +56,16 @@ namespace HRM.Infrastructure.Service
                     FirstName = x.FirstName,
                     LastName = x.LastName,
                     EmailId = x.EmailId,
+                    DOB = x.DOB,
                     SSN = x.SSN,
+                    CurrentAddress = x.CurrentAddress,
                     Phone = x.Phone,
+                    HireDate = x.HireDate,
+                    EndTime = x.EndTime,
                     EmployeeRoleId = x.EmployeeRoleId,
                     EmployeeTypeId = x.EmployeeTypeId,
-                    EmployeeStatusId = x.EmployeeStatusId
+                    EmployeeStatusId = x.EmployeeStatusId,
+                    ManagerId = x.ManagerId
                 });
             }
             return null;
@@ -73,11 +83,16 @@ namespace HRM.Infrastructure.Service
                     FirstName = result.FirstName,
                     LastName = result.LastName,
                     EmailId = result.EmailId,
+                    DOB = result.DOB,
                     SSN = result.SSN,
+                    CurrentAddress = result.CurrentAddress,
                     Phone = result.Phone,
+                    HireDate = result.HireDate,
+                    EndTime = result.EndTime,
                     EmployeeRoleId = result.EmployeeRoleId,
                     EmployeeTypeId = result.EmployeeTypeId,
-                    EmployeeStatusId = result.EmployeeStatusId
+                    EmployeeStatusId = result.EmployeeStatusId,
+                    ManagerId = result.ManagerId
                 };
             }
             return null;
@@ -91,11 +106,16 @@ namespace HRM.Infrastructure.Service
                 FirstName = model.FirstName,
                 LastName = model.LastName,
                 EmailId = model.EmailId,
+                DOB = model.DOB,
                 SSN = model.SSN,
+                CurrentAddress = model.CurrentAddress,
                 Phone = model.Phone,
+                HireDate = model.HireDate,
+                EndTime = model.EndTime,
                 EmployeeRoleId = model.EmployeeRoleId,
                 EmployeeTypeId = model.EmployeeTypeId,
-                EmployeeStatusId = model.EmployeeStatusId
+                EmployeeStatusId = model.EmployeeStatusId,
+                ManagerId = model.ManagerId
             };
             return employeeRepositoryAsync.UpdateAsync(employee);
         }

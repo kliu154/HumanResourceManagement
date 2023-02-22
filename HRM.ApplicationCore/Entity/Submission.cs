@@ -14,7 +14,6 @@ namespace HRM.ApplicationCore.Entity
         public DateTime AppliedOn { get; set; }
 
         // navigational properties
-        public Interview Interview { get; set; }
         public Candidate Candidate { get; set; }
         public JobRequirement JobRequirement { get; set; }
     }

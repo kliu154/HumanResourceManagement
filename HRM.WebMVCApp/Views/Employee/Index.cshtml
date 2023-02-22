@@ -20,16 +20,31 @@
                 Email Id
             </th>
             <th>
+                Date of Birth
+            </th>
+            <th>
                 SSN
             </th>
             <th>
-                Employee Role Id
+                Current Address
             </th>
             <th>
-                Employee Type Id
+                Hire Date
             </th>
             <th>
-                Employee Status Id
+                End Date
+            </th>
+            <th>
+                Employee Role
+            </th>
+            <th>
+                Employee Type
+            </th>
+            <th>
+                Employee Status
+            </th>
+            <th>
+                Manager Id
             </th>
             <th colspan="2">
                 Options
@@ -45,10 +60,15 @@
                     <td>@m.LastName</td>
                     <td>@m.Phone</td>
                     <td>@m.EmailId</td>
+                    <td>@m.DOB</td>
                     <td>@m.SSN</td>
+                    <td>@m.CurrentAddress</td>
+                    <td>@m.HireDate</td>
+                    <td>@m.EndTime</td>
                     <td>@m.EmployeeRoleId</td>
                     <td>@m.EmployeeTypeId</td>
                     <td>@m.EmployeeStatusId</td>
+                    <td>@m.ManagerId</td>
                     <td>
                         <a asp-action="Edit" asp-controller="Employee" asp-route-id="@m.Id">Edit</a>
                     </td>

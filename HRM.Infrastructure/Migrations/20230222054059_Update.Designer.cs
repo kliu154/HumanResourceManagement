@@ -4,6 +4,7 @@ using HRM.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HRM.Infrastructure.Migrations
 {
     [DbContext(typeof(HRMDbContext))]
-    partial class HRMDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230222054059_Update")]
+    partial class Update
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -223,6 +226,9 @@ namespace HRM.Infrastructure.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<int>("EmployeeId")
+                        .HasColumnType("int");
+
                     b.Property<DateTime>("InterviewDate")
                         .HasColumnType("datetime2");
 
@@ -244,11 +250,11 @@ namespace HRM.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("EmployeeId");
+
                     b.HasIndex("InterviewStatusId");
 
                     b.HasIndex("InterviewTypeId");
-
-                    b.HasIndex("InterviewerId");
 
                     b.HasIndex("SubmissionId");
 
@@ -419,6 +425,12 @@ namespace HRM.Infrastructure.Migrations
 
             modelBuilder.Entity("HRM.ApplicationCore.Entity.Interview", b =>
                 {
+                    b.HasOne("HRM.ApplicationCore.Entity.Employee", "Employee")
+                        .WithMany()
+                        .HasForeignKey("EmployeeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("HRM.ApplicationCore.Entity.InterviewStatus", "InterviewStatus")
                         .WithMany()
                         .HasForeignKey("InterviewStatusId")
@@ -428,12 +440,6 @@ namespace HRM.Infrastructure.Migrations
                     b.HasOne("HRM.ApplicationCore.Entity.InterviewType", "InterviewType")
                         .WithMany()
                         .HasForeignKey("InterviewTypeId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("HRM.ApplicationCore.Entity.Employee", "Employee")
-                        .WithMany()
-                        .HasForeignKey("InterviewerId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

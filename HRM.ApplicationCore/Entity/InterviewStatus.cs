@@ -16,8 +16,5 @@ namespace HRM.ApplicationCore.Entity
         [Column(TypeName = "varchar(20)")]
         public string Title { get; set; }
         public bool IsActive { get; set; }
-
-        // navigational property
-        public Interview Interview { get; set; }
     }
 }

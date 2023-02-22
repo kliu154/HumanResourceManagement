@@ -23,24 +23,49 @@
             <span asp-validation-for="EmailId"></span>
         </div>
         <div class="my-5 row col-12">
+            <label for="dob">Date of Birth</label>
+            <input asp-for="DOB" class="form-control" type="date"/>
+            <span asp-validation-for="DOB"></span>
+        </div>
+        <div class="my-5 row col-12">
             <label for="ssn">SSN</label>
             <input asp-for="SSN" class="form-control" />
             <span asp-validation-for="SSN"></span>
         </div>
         <div class="my-5 row col-12">
-            <label for="ssn">Employee Role Id</label>
-            <input asp-for="EmployeeRoleId" class="form-control" />
+            <label for="currentAddress">Current Address</label>
+            <input asp-for="CurrentAddress" class="form-control" />
+            <span asp-validation-for="CurrentAddress"></span>
+        </div>
+        <div class="my-5 row col-12">
+            <label for="hireDate">Hire Date</label>
+            <input asp-for="HireDate" class="form-control" type="date"/>
+            <span asp-validation-for="HireDate"></span>
+        </div>
+        <div class="my-5 row col-12">
+            <label for="endDate">End Date</label>
+            <input asp-for="EndTime" class="form-control" type="date"/>
+            <span asp-validation-for="EndTime"></span>
+        </div>
+        <div class="my-5 row col-12">
+            <label for="ssn">Employee Role</label>
+            <select asp-for="EmployeeRoleId" class="form-control" asp-items="@ViewBag.EmployeeRoleList"></select>
             <span asp-validation-for="EmployeeRoleId"></span>
         </div>
         <div class="my-5 row col-12">
-            <label for="ssn">Employee Type Id</label>
-            <input asp-for="EmployeeTypeId" class="form-control" />
+            <label for="ssn">Employee Type</label>
+            <select asp-for="EmployeeTypeId" class="form-control" asp-items="@ViewBag.EmployeeTypeList"></select>
             <span asp-validation-for="EmployeeTypeId"></span>
         </div>
         <div class="my-5 row col-12">
-            <label for="ssn">Employee Status Id</label>
-            <input asp-for="EmployeeStatusId" class="form-control" />
+            <label for="ssn">Employee Status</label>
+            <select asp-for="EmployeeStatusId" class="form-control" asp-items="@ViewBag.EmployeeStatusList"></select>
             <span asp-validation-for="EmployeeStatusId"></span>
+        </div>
+        <div class="my-5 row col-12">
+            <label for="managerId">Manager Id</label>
+            <input asp-for="ManagerId" class="form-control" />
+            <span asp-validation-for="ManagerId"></span>
         </div>
         <input type="submit" value="Add Employee" class="btn btn-primary" />
     </form>

@@ -24,6 +24,7 @@ namespace HRM.Infrastructure.Service
             Interview interview = new Interview()
             {
                 SubmissionId = model.SubmissionId,
+                InterviewDate = model.InterviewDate,
                 InterviewRound = model.InterviewRound,
                 InterviewTypeId = model.InterviewTypeId,
                 InterviewStatusId = model.InterviewStatusId,
@@ -46,6 +47,7 @@ namespace HRM.Infrastructure.Service
                 {
                     Id = x.Id,
                     SubmissionId = x.SubmissionId,
+                    InterviewDate = x.InterviewDate,
                     InterviewRound = x.InterviewRound,
                     InterviewTypeId = x.InterviewTypeId,
                     InterviewStatusId = x.InterviewStatusId,
@@ -65,6 +67,7 @@ namespace HRM.Infrastructure.Service
                 {
                     Id = result.Id,
                     SubmissionId = result.SubmissionId,
+                    InterviewDate = result.InterviewDate,
                     InterviewRound = result.InterviewRound,
                     InterviewTypeId = result.InterviewTypeId,
                     InterviewStatusId = result.InterviewStatusId,
@@ -80,6 +83,7 @@ namespace HRM.Infrastructure.Service
             {
                 Id = model.Id,
                 SubmissionId = model.SubmissionId,
+                InterviewDate = model.InterviewDate,
                 InterviewRound = model.InterviewRound,
                 InterviewTypeId = model.InterviewTypeId,
                 InterviewStatusId = model.InterviewStatusId,

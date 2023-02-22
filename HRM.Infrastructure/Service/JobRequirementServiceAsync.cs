@@ -26,6 +26,8 @@ namespace HRM.Infrastructure.Service
                 Title = model.Title,
                 Description = model.Description,
                 TotalPositions = model.TotalPositions,
+                PostingDate = model.PostingDate,
+                ClosingDate = model.ClosingDate,
                 JobCategoryId = model.JobCategoryId,
                 IsActive = model.IsActive
             };
@@ -48,6 +50,8 @@ namespace HRM.Infrastructure.Service
                     Title = x.Title,
                     Description = x.Description,
                     TotalPositions = x.TotalPositions,
+                    PostingDate = x.PostingDate,
+                    ClosingDate = x.ClosingDate,
                     JobCategoryId = x.JobCategoryId,
                     IsActive = x.IsActive
                 });
@@ -67,6 +71,8 @@ namespace HRM.Infrastructure.Service
                     Title = result.Title,
                     Description = result.Description,
                     TotalPositions = result.TotalPositions,
+                    PostingDate = result.PostingDate,
+                    ClosingDate = result.ClosingDate,
                     JobCategoryId = result.JobCategoryId,
                     IsActive = result.IsActive
                 };
@@ -82,6 +88,8 @@ namespace HRM.Infrastructure.Service
                 Title = model.Title,
                 Description = model.Description,
                 TotalPositions = model.TotalPositions,
+                PostingDate = model.PostingDate,
+                ClosingDate = model.ClosingDate,
                 JobCategoryId = model.JobCategoryId,
                 IsActive = model.IsActive
             };

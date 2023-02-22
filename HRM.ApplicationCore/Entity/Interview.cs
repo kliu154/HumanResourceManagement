@@ -18,9 +18,13 @@ namespace HRM.ApplicationCore.Entity
         public string InterviewRound { get; set; }
         public int InterviewTypeId { get; set; }
         public int InterviewStatusId { get; set; }
+        [ForeignKey("Employee")]
         public int InterviewerId { get; set; }
 
         // navigational properties
+        public Submission Submission { get; set; }
+        public InterviewType InterviewType { get; set; }
+        public InterviewStatus InterviewStatus { get; set; }
         public Employee Employee { get; set; }
     }
 }

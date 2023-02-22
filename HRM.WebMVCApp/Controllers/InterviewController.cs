@@ -1,17 +1,32 @@
 ﻿using HRM.ApplicationCore.Contract.Service;
 using HRM.ApplicationCore.Model.Request;
 using HRM.ApplicationCore.Model.Response;
+using HRM.Infrastructure.Service;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace HRM.WebMVCApp.Controllers
 {
     public class InterviewController : Controller
     {
         private readonly IInterviewServiceAsync interviewServiceAsync;
+        private readonly ISubmissionServiceAsync submissionServiceAsync;
+        private readonly IInterviewTypeServiceAsync interviewTypeServiceAsync;
+        private readonly IInterviewStatusServiceAsync interviewStatusServiceAsync;
+        private readonly IEmployeeServiceAsync employeeServiceAsync;
 
-        public InterviewController(IInterviewServiceAsync _interviewServiceAsync)
+        public InterviewController(
+            IInterviewServiceAsync _interviewServiceAsync,
+            ISubmissionServiceAsync _submissionServiceAsync,
+            IInterviewTypeServiceAsync _interviewTypeServiceAsync,
+            IInterviewStatusServiceAsync _interviewStatusServiceAsync,
+            IEmployeeServiceAsync _employeeServiceAsync)
         {
             interviewServiceAsync = _interviewServiceAsync;
+            submissionServiceAsync = _submissionServiceAsync;
+            interviewTypeServiceAsync = _interviewTypeServiceAsync;
+            interviewStatusServiceAsync = _interviewStatusServiceAsync;
+            employeeServiceAsync= _employeeServiceAsync;
         }
 
         public async Task<IActionResult> Index()
@@ -20,8 +35,16 @@ namespace HRM.WebMVCApp.Controllers
             return View(interviewCollection);
         }
 
-        public IActionResult Create()
+        public async Task<IActionResult> Create()
         {
+            ViewBag.SubmissionList = new SelectList(await submissionServiceAsync.GetAllSubmissionsAsync(),
+                "Id", "CandidateId");
+            ViewBag.InterviewTypeList = new SelectList(await interviewTypeServiceAsync.GetAllInterviewTypesAsync(),
+                "Id", "Title");
+            ViewBag.InterviewStatusList = new SelectList(await interviewStatusServiceAsync.GetAllInterviewStatusAsync(),
+                "Id", "Title");
+            ViewBag.EmployeeList = new SelectList(await employeeServiceAsync.GetAllEmployeesAsync(),
+                "Id", "FirstName");
             return View();
         }
 
@@ -38,6 +61,14 @@ namespace HRM.WebMVCApp.Controllers
 
         public async Task<IActionResult> Edit(int id)
         {
+            ViewBag.SubmissionList = new SelectList(await submissionServiceAsync.GetAllSubmissionsAsync(),
+                "Id", "CandidateId");
+            ViewBag.InterviewTypeList = new SelectList(await interviewTypeServiceAsync.GetAllInterviewTypesAsync(),
+                "Id", "Title");
+            ViewBag.InterviewStatusList = new SelectList(await interviewStatusServiceAsync.GetAllInterviewStatusAsync(),
+                "Id", "Title");
+            ViewBag.EmployeeList = new SelectList(await employeeServiceAsync.GetAllEmployeesAsync(),
+                "Id", "FirstName");
             var result = await interviewServiceAsync.GetInterviewByIdAsync(id);
             return View(result);
         }

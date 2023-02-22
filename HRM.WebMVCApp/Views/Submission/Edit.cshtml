@@ -1,17 +1,22 @@
-﻿@model SubmissionRequestModel;
+﻿@model SubmissionResponseModel;
 
 <div class="container">
     <form asp-controller="Submission" asp-action="Edit" method="post">
         <input type="hidden" asp-for="Id" />
         <div class="my-5 row col-12">
-            <label for="candidateId">Candidate Id</label>
-            <input asp-for="CandidateId" class="form-control" />
+            <label for="candidateId">Candidate</label>
+            <select asp-for="CandidateId" class="form-control" asp-items="ViewBag.CandidateList"></select>
             <span asp-validation-for="CandidateId"></span>
         </div>
         <div class="my-5 row col-12">
-            <label for="jobRequirementId">Job Requirement Id</label>
-            <input asp-for="JobRequirementId" class="form-control" />
+            <label for="jobRequirementId">Job Requirement</label>
+            <select asp-for="JobRequirementId" class="form-control" asp-items="ViewBag.JobRequirementList"></select>
             <span asp-validation-for="JobRequirementId"></span>
+        </div>
+        <div class="my-5 row col-12">
+            <label for="appliedOn">Applied On</label>
+            <input asp-for="AppliedOn" class="form-control" type="date"/>
+            <span asp-validation-for="AppliedOn"></span>
         </div>
         <input type="submit" value="Edit Submission" class="btn btn-primary" />
     </form>

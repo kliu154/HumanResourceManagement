@@ -42,5 +42,10 @@ namespace HRM.ApplicationCore.Entity
         public int EmployeeTypeId { get; set; }
         public int EmployeeStatusId { get; set; }
         public int ManagerId { get; set; }
+
+        // nagivational properties
+        public EmployeeRole EmployeeRole { get; set; }
+        public EmployeeType EmployeeType { get; set; }
+        public EmployeeStatus EmployeeStatus { get; set; }
     }
 }

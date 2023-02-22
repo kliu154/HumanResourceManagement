@@ -8,10 +8,13 @@
     <thead>
         <tr>
             <th>
-                Candidate Id
+                Candidate
             </th>
             <th>
-                Job Requirement Id
+                Job Requirement
+            </th>
+            <th>
+                Applied On
             </th>
             <th colspan="2">
                 Options
@@ -25,6 +28,7 @@
                         <tr>
                             <td>@m.CandidateId</td>
                             <td>@m.JobRequirementId</td>
+                            <td>@m.AppliedOn</td>
                             <td>
                                 <a asp-action="Edit" asp-controller="Submission" asp-route-id="@m.Id">Edit</a>
                             </td>

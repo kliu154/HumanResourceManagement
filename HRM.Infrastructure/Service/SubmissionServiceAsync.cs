@@ -24,7 +24,8 @@ namespace HRM.Infrastructure.Service
             Submission submission = new Submission()
             {
                 CandidateId = model.CandidateId,
-                JobRequirementId = model.JobRequirementId
+                JobRequirementId = model.JobRequirementId,
+                AppliedOn = model.AppliedOn
             };
             return submissionRepositoryAsync.InsertAsync(submission);
         }
@@ -43,7 +44,8 @@ namespace HRM.Infrastructure.Service
                 {
                     Id = x.Id,
                     CandidateId = x.CandidateId,
-                    JobRequirementId = x.JobRequirementId
+                    JobRequirementId = x.JobRequirementId,
+                    AppliedOn = x.AppliedOn
                 });
             }
             return null;
@@ -59,7 +61,8 @@ namespace HRM.Infrastructure.Service
                 {
                     Id = result.Id,
                     CandidateId = result.CandidateId,
-                    JobRequirementId = result.JobRequirementId
+                    JobRequirementId = result.JobRequirementId,
+                    AppliedOn = result.AppliedOn
                 };
             }
             return null;
@@ -71,7 +74,8 @@ namespace HRM.Infrastructure.Service
             {
                 Id = model.Id,
                 CandidateId = model.CandidateId,
-                JobRequirementId = model.JobRequirementId
+                JobRequirementId = model.JobRequirementId,
+                AppliedOn = model.AppliedOn
             };
             return submissionRepositoryAsync.UpdateAsync(submission);
         }

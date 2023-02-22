@@ -12,6 +12,7 @@ namespace HRM.ApplicationCore.Model.Request
     {
         public int Id { get; set; }
         public int SubmissionId { get; set; }
+        public DateTime InterviewDate { get; set; }
         public string InterviewRound { get; set; }
         public int InterviewTypeId { get; set; }
         public int InterviewStatusId { get; set; }

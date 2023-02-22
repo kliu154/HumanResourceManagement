@@ -18,8 +18,18 @@
             <span asp-validation-for="TotalPositions"></span>
         </div>
         <div class="my-5 row col-12">
+            <label for="postingDate">Posting Date</label>
+            <input asp-for="PostingDate" class="form-control" type="date" />
+            <span asp-validation-for="PostingDate"></span>
+        </div>
+        <div class="my-5 row col-12">
+            <label for="closingDate">Closing Date</label>
+            <input asp-for="ClosingDate" class="form-control" type="date" />
+            <span asp-validation-for="ClosingDate"></span>
+        </div>
+        <div class="my-5 row col-12">
             <label for="jobCategoryId">Job Category Id</label>
-            <input asp-for="JobCategoryId" class="form-control" />
+            <select asp-for="JobCategoryId" class="form-control" asp-items="@ViewBag.JobCategoryList"></select>
             <span asp-validation-for="JobCategoryId"></span>
         </div>
         <div class="my-5">

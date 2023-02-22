@@ -1,11 +1,11 @@
-﻿@model FeedbackRequestModel;
+﻿@model FeedbackResponseModel;
 
 <div class="container">
     <form asp-controller="Feedback" asp-action="Edit" method="post">
         <input type="hidden" asp-for="Id" />
         <div class="my-5 row col-12">
             <label for="interviewId">Interview Id</label>
-            <input asp-for="InterviewId" class="form-control" />
+            <select asp-for="InterviewId" class="form-control" asp-items="ViewBag.InterviewList"></select>
             <span asp-validation-for="InterviewId"></span>
         </div>
         <div class="my-5 row col-12">

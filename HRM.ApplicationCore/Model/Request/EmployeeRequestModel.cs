@@ -22,15 +22,19 @@ namespace HRM.ApplicationCore.Model.Request
         [Required]
         [DataType(DataType.EmailAddress)]
         public string EmailId { get; set; }
+        public DateTime DOB { get; set; }
 
         [Required]
         public string SSN { get; set; }
-
+        public string? CurrentAddress { get; set; }
 
         [Required]
         public string Phone { get; set; }
+        public DateTime HireDate { get; set; }
+        public DateTime EndTime { get; set; }
         public int EmployeeRoleId { get; set; }
         public int EmployeeTypeId { get; set; }
         public int EmployeeStatusId { get; set; }
+        public int ManagerId { get; set; }
     }
 }

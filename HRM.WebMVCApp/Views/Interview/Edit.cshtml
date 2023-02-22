@@ -1,12 +1,17 @@
-﻿@model InterviewRequestModel;
+﻿@model InterviewResponseModel;
 
 <div class="container">
     <form asp-controller="Interview" asp-action="Edit" method="post">
         <input type="hidden" asp-for="Id" />
         <div class="my-5 row col-12">
-            <label for="submissionId">Submission Id</label>
-            <input asp-for="SubmissionId" class="form-control" />
+            <label for="submissionId">Submission</label>
+            <select asp-for="SubmissionId" class="form-control" asp-items="ViewBag.SubmissionList"></select>
             <span asp-validation-for="SubmissionId"></span>
+        </div>
+        <div class="my-5 row col-12">
+            <label for="interviewDate">Interview Date</label>
+            <input asp-for="InterviewDate" class="form-control" type="date" />
+            <span asp-validation-for="InterviewDate"></span>
         </div>
         <div class="my-5 row col-12">
             <label for="interviewRound">Interview Round</label>
@@ -14,18 +19,18 @@
             <span asp-validation-for="InterviewRound"></span>
         </div>
         <div class="my-5 row col-12">
-            <label for="interviewTypeId">Interview Type Id</label>
-            <input asp-for="InterviewTypeId" class="form-control" />
+            <label for="interviewTypeId">Interview Type</label>
+            <select asp-for="InterviewTypeId" class="form-control" asp-items="ViewBag.InterviewTypeList"></select>
             <span asp-validation-for="InterviewTypeId"></span>
         </div>
         <div class="my-5 row col-12">
-            <label for="interviewStatusId">Interview Status Id</label>
-            <input asp-for="InterviewStatusId" class="form-control" />
+            <label for="interviewStatusId">Interview Status</label>
+            <select asp-for="InterviewStatusId" class="form-control" asp-items="ViewBag.InterviewStatusList"></select>
             <span asp-validation-for="InterviewStatusId"></span>
         </div>
         <div class="my-5 row col-12">
-            <label for="interviewerId">Interviewer Id</label>
-            <input asp-for="InterviewerId" class="form-control" />
+            <label for="interviewerId">Interviewer</label>
+            <select asp-for="InterviewerId" class="form-control" asp-items="ViewBag.EmployeeList"></select>
             <span asp-validation-for="InterviewerId"></span>
         </div>
         <input type="submit" value="Edit Interview" class="btn btn-primary" />

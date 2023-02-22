@@ -2,16 +2,22 @@
 using HRM.ApplicationCore.Model.Request;
 using HRM.ApplicationCore.Model.Response;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace HRM.WebMVCApp.Controllers
 {
     public class JobRequirementController : Controller
     {
         private readonly IJobRequirementServiceAsync jobRequirementServiceAsync;
+        private readonly IJobCategoryServiceAsync jobCategoryServiceAsync;
 
-        public JobRequirementController(IJobRequirementServiceAsync _jobRequirementServiceAsync)
+        public JobRequirementController(
+            IJobRequirementServiceAsync _jobRequirementServiceAsync, 
+            IJobCategoryServiceAsync _jobCategoryServiceAsync
+            )
         {
             jobRequirementServiceAsync = _jobRequirementServiceAsync;
+            jobCategoryServiceAsync = _jobCategoryServiceAsync;
         }
 
         public async Task<IActionResult> Index()
@@ -20,8 +26,10 @@ namespace HRM.WebMVCApp.Controllers
             return View(jobRequirementCollection);
         }
 
-        public IActionResult Create()
+        public async Task<IActionResult> Create()
         {
+            ViewBag.JobCategoryList = new SelectList(await jobCategoryServiceAsync.GetAllJobCategoriesAsync(),
+                "Id", "Name");
             return View();
         }
 
@@ -38,6 +46,8 @@ namespace HRM.WebMVCApp.Controllers
 
         public async Task<IActionResult> Edit(int id)
         {
+            ViewBag.JobCategoryList = new SelectList(await jobCategoryServiceAsync.GetAllJobCategoriesAsync(),
+                "Id", "Name");
             var result = await jobRequirementServiceAsync.GetJobRequirementByIdAsync(id);
             return View(result);
         }
