@@ -12,7 +12,6 @@ namespace HRM.Infrastructure.Data
     {
         public HRMDbContext(DbContextOptions<HRMDbContext> options) : base (options)
         {
-
         }
 
         public DbSet<JobRequirement> JobRequirement { get; set; }
